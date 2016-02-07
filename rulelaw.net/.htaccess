@@ -1,0 +1,2 @@
+AuthName "booksite"
+AuthUserFile "/home/paultopi/.htpasswds/public_html/rulelaw.net/passwd"
