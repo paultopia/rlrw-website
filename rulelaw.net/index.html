@@ -75,6 +75,16 @@ for my chart */
 button.button-primary {
   width: 200px
 }
+
+/* and for the blurb thing */
+
+.blurbs {
+	display: none;
+	font-family: Tahoma, Geneva, sans-serif; 
+	font-size: 0.8em;
+	text-align: justify;
+
+}
 	</style>
 
 <!-- meta tags for facebook sharing -->
@@ -131,7 +141,7 @@ button.button-primary {
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <div class="container">
 <div class="row">
@@ -152,9 +162,22 @@ button.button-primary {
 </div>
 </div>
 
+<div class="row">
+<div class="ten columns" style="margin-top: 2%">
+
+
+<p class="blurbs"><span style="color:#4C0000;">"Paul Gowder's masterpiece articulates a new vision of the rule of the law that protects the disempowered and marginalized, and that demands that the nation-state rationalize its coercive power. He relentlessly attacks irrational social, economic and political hierarchies, particularly those that give continued vitality to racial inequality in the US today. As such his rule of law is firmly rooted in notions of human rights, and looks askance at soaring inequality in the US. This rule of law protects real people in need of real protection, rather than serving as just another rhetorical instrument in the arsenal of the wealthy and powerful. It also serves, incidentally, as a bedrock foundation for economic development and a tool that can help avoid financial disruptions like that seen in 2008."</span>
+<br><span style="color:#888;"><i>Steven A. Ramirez, author of Lawless Capitalism</i></span></p>
+<p class="blurbs"><span style="color:#4C0000;">"The Rule of Law in the Real World explores and connects legal philosophy, conceptual and normative, as well as historical interpretation and social sciences, policy analysis, and advocacy. It makes insightful and distinctive contributions in each domain. Moreover, it brings them into mutually informing connection. Standard inmates of the disciplines rarely make (or even imagine) such connections, even when their subject - the rule of law - bears the same name. Gowder's achievement is thus far more than a sum of its exemplary parts. It is an all too rare combination of theoretical cogency, normative sophistication and ambition, empirical attentiveness, and real world engagement and pay-off."</span> 
+<br><span style="color:#888;"><i>Martin Krygier, Gordon Samuels Professor of Law and Social Theory, and Co-Director, Network for Interdisciplinary Studies of Law, University of New South Wales</i></span>
+</div></div>
+
 <div class="row" id="about">
-<div class="eleven columns" style="margin-top: 5%">
+<div class="eleven columns" style="margin-top: 2%">
+
+
 <h4>About the Book</h4>
+
 
 <p><strong>The Rule of Law in the Real World</strong> gives a comprehensive new theory of the political and legal ideal known as &quot;the rule of law&quot;: what it means (the coordinated collective control of power), why it matters (it constitutes a morally important kind of social equality), and how these properties should be taken into account in social scientific attempts to measure it as well as policy efforts to promote it.</p>
 <img src="cover.png" style="float: right; margin: -5% 0% 1% 2%;" width="40%" alt="The Rule of Law in the Real World cover image" />
@@ -521,6 +544,32 @@ button.button-primary {
 
 <!-- google sharing code --> 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+<script>
+/* 
+also stolen -- see https://stackoverflow.com/questions/3670487/jquery-text-fade-transition-from-one-text-to-another/17004791#17004791 
+*/
+(function() {
+
+    var blurbs = $(".blurbs");
+    var blurbIndex = -1;
+ 
+    
+    function showNextBlurb() {
+        ++blurbIndex;
+        blurbs.eq(blurbIndex % blurbs.length)
+            .fadeIn(2000)
+            .delay(20000)
+            .fadeOut(2000, showNextBlurb);
+ 
+    }
+    
+    showNextBlurb();
+    
+})();
+</script>
+
 
   </body>
 </html>
