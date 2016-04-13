@@ -11,6 +11,12 @@
 */
 
 
+/* Fancy up the look a little (PG) 
+---------------------------------- */ 
+
+::selection {background-color: rgba(76,0,0, .2);}
+::-moz-selection {background-color: #FACABB;}
+
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Grid
