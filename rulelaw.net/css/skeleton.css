@@ -142,7 +142,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  color: #4C0000;
+  color: rgba(76,0,0,.75);
   font-weight: 300; }
 h1 { font-size: 4.2rem; line-height: 1.2;  letter-spacing: -.1rem;}
 h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: .1rem; }
@@ -165,14 +165,14 @@ p {
   margin-top: 0; }
 
 strong {
-  color: #4C0000;
+  color: rgba(76,0,0,.75);
 }
 
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #4C0000;
+  color: rgba(76,0,0,.75);
   text-decoration: none;
   }
 
@@ -191,13 +191,13 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 3%;
-  color: #4C0000;
+  color: rgba(76,0,0,.75);
   text-align: center;
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .2rem;
-  text-shadow: .4px .4px 0px #4C0000;
+  text-shadow: .4px .4px 0px rgba(76,0,0,.75);
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -216,7 +216,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #4C0000;
+  color: rgba(76,0,0,.75);
   border-color: rgba(76,0,0,.3);
   background-color: rgba(76,0,0,.3);
   outline: 0; }
