@@ -165,7 +165,11 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p {
   margin-top: 0; 
   font-weight: 300;
-  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto; 
+  -ms-hyphens: auto;}
 
 strong {
   color: rgba(76,0,0,.75);
