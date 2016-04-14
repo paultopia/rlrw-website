@@ -177,8 +177,8 @@ a {
   }
 
 a:hover {
-  color: #5D1111;
-  font-weight: bolder;
+  color: #CF4444;
+  text-shadow: .9px .9px 1px #CF4444;
   }
 
 /* Buttons
