@@ -1,0 +1,19 @@
+prefixes
+
+multidimensional: comb_
+
+3d: threed_
+
+histogram: hist_
+
+map: map_
+
+pluralism: plur_
+
+property rights: prop_
+
+personal autonomy: auto_
+
+electoral process: elec_
+
+gdp: gdp_
