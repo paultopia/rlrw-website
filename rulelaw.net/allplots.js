@@ -340,7 +340,7 @@ var threed_layout = {
   autosize: true, 
   dragmode: "turntable", 
   font: {color: "rgb(100, 100, 100)"}, 
-  height: 542, 
+  height: 467, 
   margin: {
     r: 0, 
     t: 0, 

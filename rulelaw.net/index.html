@@ -31,19 +31,13 @@
 	<link href="icons/manifest.json" rel="manifest" />
 	<meta content="#ffffff" name="msapplication-TileColor" />
 	<meta content="icons/ms-icon-144x144.png" name="msapplication-TileImage" />
-	<meta content="#ffffff" name="theme-color" /><!-- a bit of PG-new functionality and tweaking --><script>
-    function switchChart(chartLink){
-      document.getElementById('chartframe').setAttribute('src', chartLink);
-    }
-    var multiChart = "https://plot.ly/~paulgowder/101.embed?width=640&height=480";
-    var histChart = "https://plot.ly/~paulgowder/151.embed?width=640&height=480";
-    var propChart = "https://plot.ly/~paulgowder/80.embed?width=640&height=480";
-    var plurChart = "https://plot.ly/~paulgowder/72.embed?width=640&height=480";
-    var elecChart = "https://plot.ly/~paulgowder/66.embed?width=640&height=480";
-    var gdpChart = "https://plot.ly/~paulgowder/58.embed?width=640&height=480";
-    var libChart = "https://plot.ly/~paulgowder/127.embed?width=640&height=480";
-    var dem3dChart = "https://plot.ly/~paulgowder/213.embed?width=640&height=480";
-    var scoreGlobe = "https://plot.ly/~paulgowder/233.embed?width=640&height=480";
+	<meta content="#ffffff" name="theme-color" />
+
+<script src="pl/plotly.min.js"></script>
+<script src="allplots.min.js"></script>
+
+  <!-- a bit of PG-new functionality and tweaking --><script>
+   
 
     function showHide(shID) {
        if (document.getElementById(shID)) {
@@ -105,7 +99,7 @@ button.button-primary {
 
 <!-- google analytics code -->
 
-<script>
+<script async defer>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -124,7 +118,7 @@ button.button-primary {
 
 <!-- facebook SDK -->
 <div id="fb-root"></div>
-<script>
+<script async defer>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '940334746080456',
@@ -207,9 +201,16 @@ button.button-primary {
 <div class="row" id="graphs">
 <div class="ten columns" style="margin-top: 5%">
 <h4>What the Rule of Law Looks Like</h4>
-<iframe frameborder="0" height="480" id="chartframe" scrolling="no" seamless="seamless" src="https://plot.ly/~paulgowder/101.embed?width=640&amp;height=480" width="100%"></iframe></div>
+<div id="graphdisp" style="width:640px;height:480px;"></div> 
 
-<div class="one columns" style="margin-top: 15%"><button class="button-primary" onclick="switchChart(multiChart)">Multidimensional</button><button class="button-primary" onclick="switchChart(histChart)">Histogram</button><button class="button-primary" onclick="switchChart(scoreGlobe)">Globe with Scores</button><button class="button-primary" onclick="switchChart(propChart)">Property Rights</button><button class="button-primary" onclick="switchChart(plurChart)">Political Pluralism</button><button class="button-primary" onclick="switchChart(elecChart)">Electoral Process</button><button class="button-primary" onclick="switchChart(dem3dChart)">Democracy in 3D</button><button class="button-primary" onclick="switchChart(gdpChart)">GDP Per Capita</button><button class="button-primary" onclick="switchChart(libChart)">Individual Liberty</button></div>
+</div>
+
+<script>
+  GRAPHS = document.getElementById('graphdisp');
+  Plotly.newPlot(GRAPHS, comb_data, comb_layout);
+  </script>
+
+<div class="one columns" style="margin-top: 15%"><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, comb_data, comb_layout)">Multidimensional</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, hist_data, hist_layout)">Histogram</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, map_data, map_layout)">Globe with Scores</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, prop_data, prop_layout)">Property Rights</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, plur_data, plur_layout)">Political Pluralism</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, elec_data, elec_layout)">Electoral Process</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, threed_data, threed_layout)">Democracy in 3D</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, gdp_data, gdp_layout)">GDP Per Capita</button><button class="button-primary" onclick="Plotly.newPlot(GRAPHS, auto_data, auto_layout)">Individual Liberty</button></div>
 
 <div class="one columns" style="margin-top: 5%"></div>
 </div>
