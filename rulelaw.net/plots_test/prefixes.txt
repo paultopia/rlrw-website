@@ -17,3 +17,12 @@ personal autonomy: auto_
 electoral process: elec_
 
 gdp: gdp_
+
+
+types:
+scatter
+linear
+scatter3d
+bar
+choropleth
+orthographic
